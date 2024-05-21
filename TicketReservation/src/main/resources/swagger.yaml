@@ -1,0 +1,166 @@
+openapi: 3.0.0
+info:
+  title: Ticket Reservation API
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:8083/tickets  # Replace with your actual base URL
+tags:
+  - name: Ticket reservation
+    description: buying a Train ticket via the below apis
+paths:
+  /health:
+    get:
+      tags:
+        - Ticket reservation    
+      summary: Health Check
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: health is success
+
+  /:
+    post:
+      tags:
+        - Ticket reservation
+      summary: Buy Ticket
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Ticket'
+      responses:
+        '200':
+          description: Ticket created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Ticket'
+    put:
+      tags:
+        - Ticket reservation    
+      summary: Modify Seat
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ModifySeat'
+      responses:
+        '200':
+          description: Seat modified successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Ticket'
+        '400':
+          description: Seat cannot be changed or Ticket ID not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error message
+  /{id}:                
+    delete:
+      tags:
+        - Ticket reservation    
+      summary: Remove User (deletes all user's tickets)
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: User's tickets deleted successfully
+        '404':
+          description: User not found or no tickets to delete
+
+    get:
+      tags:
+        - Ticket reservation    
+      summary: Get Ticket by ID
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Ticket found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Ticket'
+        '404':
+          description: Ticket not found
+
+  /section/{section}:
+    get:
+      tags:
+        - Ticket reservation    
+      summary: Get Tickets by Section
+      parameters:
+        - in: path
+          name: section
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of tickets for the section
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Ticket'
+        '404':
+          description: No tickets found for the section
+
+components:
+  schemas:
+    Ticket:
+      type: object
+      properties:
+        ticketId:
+          type: integer
+        user:  # Assuming user is a separate object with its own properties
+          type: object
+        fromStation:
+          type: string
+        toStation:
+          type: string
+        price:
+          type: number
+        section:
+          type: string
+          enum:
+            - Section_1  # Replace with actual enum values for section
+            - Section_2
+            # ...
+        seat:
+          type: integer
+    RemoveUser:
+      type: object
+      properties:
+        # Assuming RemoveUser has an "email" property to identify the user
+        email:
+          type: string
+    ModifySeat:
+      type: object
+      properties:
+        ticketId:
+          type: integer
+        newSeat:
+          type: integer
