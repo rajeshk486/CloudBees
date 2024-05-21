@@ -14,13 +14,18 @@ This Application designed in layered manner
 1. swagger document for API specification
 2. Controller to initate calls from external world
 3. Models to represent the data to be stored/retrived/processed
-4. Repository contains the query and functions to access the data
+4. Repository contains the query and functions to access the data, DB used was H2 in-memory DB.
 5. Service layer is a interface layer
 6. Impl layer is the implementation of service interface
-7. ![img.png]<img width="716" alt="Screenshot 2024-05-21 at 9 41 38 PM" src="https://github.com/rajeshk486/CloudBees/assets/2852510/f38ca9f4-bc56-41d6-901f-5aeb4ce914d1">
-Unit tests also written and executed successfully
+7. <img width="716" alt="Screenshot 2024-05-21 at 9 41 38 PM" src="https://github.com/rajeshk486/CloudBees/assets/2852510/f38ca9f4-bc56-41d6-901f-5aeb4ce914d1">
+
+
+
 <img width="305" alt="image" src="https://github.com/rajeshk486/CloudBees/assets/2852510/42f1973b-673a-49a6-8583-5ae0b0d368e0">
 
+
+Unit tests also written and executed successfully
+CURLS sample given below
 9. Buy ticket:
      curl --location 'localhost:8083/tickets' \
       --header 'Content-Type: application/json' \
