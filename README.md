@@ -25,6 +25,8 @@ This Application designed in layered manner
 
 
 Unit tests also written and executed successfully
+
+
 CURLS sample given below
 9. Buy ticket:
      curl --location 'localhost:8083/tickets' \
