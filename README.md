@@ -24,7 +24,7 @@ This Application designed in layered manner
 <img width="305" alt="image" src="https://github.com/rajeshk486/CloudBees/assets/2852510/42f1973b-673a-49a6-8583-5ae0b0d368e0">
 
 
-Unit tests also written and executed successfully
+8. Unit tests also written and executed successfully
 
 
 CURLS sample given below
@@ -41,6 +41,8 @@ CURLS sample given below
       "price":23,
       "section":"A"}'
 10. Get ticket by id:
+
+
    curl --location --request GET 'localhost:8083/tickets/2' \
    --header 'Content-Type: application/json' \
    --data-raw '{
@@ -52,4 +54,7 @@ CURLS sample given below
    "to":"paris",
    "price":23,
    "section":"A"}'
+
+
+   
 for others please check the Swagger documentation
