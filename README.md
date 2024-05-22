@@ -58,3 +58,20 @@ CURLS sample given below
 
    
 for others please check the Swagger documentation
+
+
+Adding images of Local test:
+<img width="727" alt="image" src="https://github.com/rajeshk486/CloudBees/assets/2852510/065bab4a-aff2-4f60-be75-be972e07430d">
+
+<img width="522" alt="image" src="https://github.com/rajeshk486/CloudBees/assets/2852510/5d31b940-41aa-4e27-a5af-2c3ea0ff0ca5">
+
+<img width="469" alt="image" src="https://github.com/rajeshk486/CloudBees/assets/2852510/60c2772a-97e3-459b-8015-ee7454f4d667">
+
+<img width="644" alt="image" src="https://github.com/rajeshk486/CloudBees/assets/2852510/d06aa06d-7b50-4dfa-8ef9-fce2b7b4ba66">
+
+<img width="1038" alt="image" src="https://github.com/rajeshk486/CloudBees/assets/2852510/90ec07be-9bed-4e0b-aac4-6cd4e9ac49b5">
+
+
+
+
+
