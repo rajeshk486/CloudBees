@@ -17,47 +17,14 @@ This Application designed in layered manner
 4. Repository contains the query and functions to access the data, DB used was H2 in-memory DB.
 5. Service layer is a interface layer
 6. Impl layer is the implementation of service interface
-7. <img width="716" alt="Screenshot 2024-05-21 at 9 41 38 PM" src="https://github.com/rajeshk486/CloudBees/assets/2852510/f38ca9f4-bc56-41d6-901f-5aeb4ce914d1">
-
-
+7. Unit tests also written and executed successfully
+for others please check the
+ [Swagger documentation](https://github.com/rajeshk486/CloudBees/blob/main/TicketReservation/src/main/resources/swagger.yaml)
+ [API collection](https://github.com/rajeshk486/CloudBees/blob/main/CloudBeesAssignment.postman_collection.json)
 
 <img width="305" alt="image" src="https://github.com/rajeshk486/CloudBees/assets/2852510/42f1973b-673a-49a6-8583-5ae0b0d368e0">
-
-
-8. Unit tests also written and executed successfully
-
-
-CURLS sample given below
-9. Buy ticket:
-     curl --location 'localhost:8083/tickets' \
-      --header 'Content-Type: application/json' \
-      --data-raw '{
-      "user":{"firstName": "rajesh",
-      "lastName": "kamal",
-      "email": "rajeshk486@gmail.com"
-      },
-      "from":"London",
-      "to":"paris",
-      "price":23,
-      "section":"A"}'
-10. Get ticket by id:
-
-
-   curl --location --request GET 'localhost:8083/tickets/2' \
-   --header 'Content-Type: application/json' \
-   --data-raw '{
-   "user":{"firstName": "rajesh",
-   "lastName": "kamal",
-   "email": "rajeshk486@gmail.com"
-   },
-   "from":"London",
-   "to":"paris",
-   "price":23,
-   "section":"A"}'
-
-
-   
-for others please check the Swagger documentation
+  
+<img width="716" alt="Screenshot 2024-05-21 at 9 41 38 PM" src="https://github.com/rajeshk486/CloudBees/assets/2852510/f38ca9f4-bc56-41d6-901f-5aeb4ce914d1">
 
 
 Adding images of Local test:
