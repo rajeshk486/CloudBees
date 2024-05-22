@@ -1,6 +1,5 @@
 # CloudBees
 contains assignement given by cloudBees
-[Readme.md](Readme.md)# Getting Started
 
 ### Reference Documentation
 For further reference, please consider the following sections:
@@ -12,7 +11,8 @@ For further reference, please consider the following sections:
 * [API collection](https://github.com/rajeshk486/CloudBees/blob/main/CloudBeesAssignment.postman_collection.json)
 
 ### Insights
-This Application designed in layered manner
+This Application designed in structured manner segregatting conttoller, service and reposistory layers.
+Proper documentation provided on each API, which will be easy to understand and good starting point to debug.
 1. swagger document for API specification
 2. Controller to initate calls from external world
 3. Models to represent the data to be stored/retrived/processed
