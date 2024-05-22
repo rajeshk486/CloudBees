@@ -11,7 +11,7 @@ For further reference, please consider the following sections:
   * [ticketServiceImplementation](https://github.com/rajeshk486/CloudBees/blob/main/TicketReservation/src/test/java/com/ticket/reservation/Service/Impl/TicketServiceImplTest.java)
 * [API collection](https://github.com/rajeshk486/CloudBees/blob/main/CloudBeesAssignment.postman_collection.json)
 
-### Guides
+### Insights
 This Application designed in layered manner
 1. swagger document for API specification
 2. Controller to initate calls from external world
