@@ -59,6 +59,19 @@ public class TicketController {
         }
         return ResponseEntity.ok(modifiedTicket);
     }
+
+    /**
+     * Retrieves a ticket by its ID.
+     *
+     * This endpoint fetches a ticket from the database based on the provided ID.
+     *
+     * @param id The unique identifier of the ticket (long).
+     * @return A `ResponseEntity` object:
+     *   * Status 200 (OK) with the retrieved `Ticket` object in the body if found.
+     *   * Status 404 (Not Found) if no ticket is found with the provided ID.
+     *
+     * @throws Exception If an error occurs while retrieving the ticket.
+     */
     @GetMapping(value="/{id}")
     public ResponseEntity<?> getTicketbyId(@PathVariable long id){
         Ticket ticket = ticketService.getTicketById(id);
@@ -69,11 +82,11 @@ public class TicketController {
     }
 
     /**
-     * Retrieves a ticket by its ID.
+     * Retrieves a ticket by its Section(A,B).
      *
      * This endpoint fetches a ticket from the database based on the provided ID.
      *
-     * @param id The unique identifier of the ticket (long).
+     * @param Section The identifier of the compartment either A or B.
      * @return A `ResponseEntity` object:
      *   * Status 200 (OK) with the retrieved `Ticket` object in the body if found.
      *   * Status 404 (Not Found) if no ticket is found with the provided ID.
