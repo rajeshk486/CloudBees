@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "f2919014-3194-45c9-9f81-28878410c904",
+		"name": "CloudBeesAssignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "buyTickets",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\":{\"firstName\": \"rajesh\",\n    \"lastName\": \"kamal\",\n    \"email\": \"rajeshk486@gmail.com\"\n    },\n    \"from\":\"London\",\n    \"to\":\"paris\",\n    \"price\":23,\n    \"section\":\"A\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/tickets",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTicketsById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\":{\"firstName\": \"rajesh\",\n    \"lastName\": \"kamal\",\n    \"email\": \"rajeshk486@gmail.com\"\n    },\n    \"from\":\"London\",\n    \"to\":\"paris\",\n    \"price\":23,\n    \"section\":\"A\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/tickets/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"tickets",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTicketsBySection",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\":{\"firstName\": \"rajesh\",\n    \"lastName\": \"kamal\",\n    \"email\": \"rajeshk486@gmail.com\"\n    },\n    \"from\":\"London\",\n    \"to\":\"paris\",\n    \"price\":23,\n    \"section\":\"A\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/tickets/section/B",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"tickets",
+						"section",
+						"B"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ModifySeat",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ticketId\": 1,\n    \"section\":\"B\",\n    \"seat\":101\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/tickets",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteTicket",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8083/tickets/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"tickets",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
