@@ -117,6 +117,4 @@ public class TicketController {
             return ResponseEntity.notFound().build();
         return ResponseEntity.ok().build();
     }
-
-
 }
