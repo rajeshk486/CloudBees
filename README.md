@@ -9,6 +9,8 @@ For further reference, please consider the following sections:
 * [Test cases are included](https://github.com/rajeshk486/CloudBees/tree/main/TicketReservation/src/test/java/com/ticket/reservation)
   * [ticketController](https://github.com/rajeshk486/CloudBees/blob/main/TicketReservation/src/test/java/com/ticket/reservation/Controller/TicketControllerTest.java)
   * [ticketServiceImplementation](https://github.com/rajeshk486/CloudBees/blob/main/TicketReservation/src/test/java/com/ticket/reservation/Service/Impl/TicketServiceImplTest.java)
+* [API collection](https://github.com/rajeshk486/CloudBees/blob/main/CloudBeesAssignment.postman_collection.json)
+
 ### Guides
 This Application designed in layered manner
 1. swagger document for API specification
